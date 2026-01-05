@@ -6,4 +6,5 @@
 
   services.mysql.enable = true;
   services.redis.enable = true;
+  services.mailpit.enable = true;
 }
