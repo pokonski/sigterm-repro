@@ -3,3 +3,8 @@ inputs:
     url: github:cachix/devenv
   nixpkgs:
     url: github:cachix/devenv-nixpkgs/rolling
+  nixpkgs-ruby:
+    url: github:bobvanderlinden/nixpkgs-ruby
+    inputs:
+      nixpkgs:
+        follows: nixpkgs
