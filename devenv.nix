@@ -1,10 +1,15 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  process.managers.process-compose.enable = false;
-  process.managers.mprocs.enable = true;
+  languages.ruby = {
+    enable = true;
+    version = "3.4.7";
+    bundler.enable = false;
+    lsp.enable = true;
+  };
 
-  services.mysql.enable = true;
-  services.redis.enable = true;
-  services.mailpit.enable = true;
+  packages = [
+    pkgs.libyaml
+  ];
+
 }
